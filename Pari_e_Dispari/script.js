@@ -26,8 +26,18 @@ function randomNum(min, max) {
 const numSum = userNum + pcNum
 console.log("Somma dei numeri scelti e generati:", numSum);
 
-
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+let sumVerify = oddEven(numSum)
+console.log("La somma é:", sumVerify);
 
+function oddEven(num) {
+    let oddEvenVerification = ""
+    if (num % 2 === 0) {
+        oddEvenVerification = "pari"
+    } else {
+        oddEvenVerification = "dispari"
+    }
+    return oddEvenVerification
+}
 
 // Dichiariamo chi ha vinto.
