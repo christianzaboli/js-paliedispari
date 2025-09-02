@@ -8,26 +8,26 @@
 
 // L’utente sceglie pari o dispari.
 const userChoice = prompt("Scegli tra pari o dispari")
-console.log(userChoice);
+console.log("Hai scelto:", userChoice);
 
 // L’utente sceglie un numero da 1 a 5
 const userNum = parseInt(prompt("Scegli un numero da 1 a 5"))
-console.log(userNum);
+console.log("Hai scelto:", userNum);
 
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
-const pcNum = randomNum(1, 5)
-console.log(pcNum);
+const botNum = randomNum(1, 5)
+console.log("Il bot ha scelto:", botNum);
 
 function randomNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 // Sommiamo i due numeri
-const numSum = userNum + pcNum
-console.log("Somma dei numeri scelti e generati:", numSum);
+const numSum = userNum + botNum
+console.log("Somma dei numeri scelti é:", numSum);
 
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
-let sumVerify = oddEven(numSum)
+const sumVerify = oddEven(numSum)
 console.log("La somma é:", sumVerify);
 
 function oddEven(num) {
@@ -41,3 +41,8 @@ function oddEven(num) {
 }
 
 // Dichiariamo chi ha vinto.
+if (userChoice.toLowerCase() === sumVerify) {   //metodo .toLowerCase applicato per evitare incongruenze case sensitive
+    console.log("Congratulazioni! hai vinto");
+} else {
+    console.log("Spiacente, il bot ha vinto");
+}
