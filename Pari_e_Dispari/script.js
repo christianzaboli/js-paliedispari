@@ -15,6 +15,12 @@ const userNum = parseInt(prompt("Scegli un numero da 1 a 5"))
 console.log(userNum);
 
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
+const pcNum = randomNum(1, 5)
+console.log(pcNum);
+
+function randomNum(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 // Sommiamo i due numeri
 
@@ -23,4 +29,3 @@ console.log(userNum);
 
 
 // Dichiariamo chi ha vinto.
-
