@@ -23,6 +23,8 @@ function randomNum(min, max) {
 }
 
 // Sommiamo i due numeri
+const numSum = userNum + pcNum
+console.log("Somma dei numeri scelti e generati:", numSum);
 
 
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
